@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_dark">#121214</color>
+    <color name="display_bg">#1A1A1E</color>
+
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#7A7A85</color>
+
+    <color name="btn_number">#29292E</color>
+    <color name="btn_operator">#FF9F0A</color>
+    <color name="btn_scientific">#3E3E42</color>
+    <color name="btn_clear">#A5A5A5</color>
+    <color name="text_dark">#000000</color>
+</resources>

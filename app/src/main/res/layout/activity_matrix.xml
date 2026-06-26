@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3×3 Matrix Processor"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leave Row 3 / Col 3 as 0 for 2×2 calculation"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:layout_marginBottom="20dp">
+
+            <TableRow android:layout_marginBottom="8dp">
+                <EditText android:id="@+id/m00" android:layout_height="55dp" android:hint="A11" android:textColor="@color/text_primary" android:backgroundTint="@color/text_secondary" android:inputType="numberSigned|numberDecimal" android:gravity="center" android:layout_margin="4dp"/>
+                <EditText android:id="@+id/m01" android:layout_height="55dp" android:hint="A12" android:textColor="@color/text_primary" android:backgroundTint="@color/text_secondary" android:inputType="numberSigned|numberDecimal" android:gravity="center" android:layout_margin="4dp"/>
+                <EditText android:id="@+id/m02" android:layout_height="55dp" android:hint="A13" android:textColor="@color/text_primary" android:backgroundTint="@color/text_secondary" android:inputType="numberSigned|numberDecimal" android:gravity="center" android:layout_margin="4dp"/>
+            </TableRow>
+            <TableRow android:layout_marginBottom="8dp">
+                <EditText android:id="@+id/m10" android:layout_height="55dp" android:hint="A21" android:textColor="@color/text_primary" android:backgroundTint="@color/text_secondary" android:inputType="numberSigned|numberDecimal" android:gravity="center" android:layout_margin="4dp"/>
+                <EditText android:id="@+id/m11" android:layout_height="55dp" android:hint="A22" android:textColor="@color/text_primary" android:backgroundTint="@color/text_secondary" android:inputType="numberSigned|numberDecimal" android:gravity="center" android:layout_margin="4dp"/>
+                <EditText android:id="@+id/m12" android:layout_height="55dp" android:hint="A23" android:textColor="@color/text_primary" android:backgroundTint="@color/text_secondary" android:inputType="numberSigned|numberDecimal" android:gravity="center" android:layout_margin="4dp"/>
+            </TableRow>
+            <TableRow android:layout_marginBottom="8dp">
+                <EditText android:id="@+id/m20" android:layout_height="55dp" android:hint="A31" android:textColor="@color/text_primary" android:backgroundTint="@color/text_secondary" android:inputType="numberSigned|numberDecimal" android:gravity="center" android:layout_margin="4dp"/>
+                <EditText android:id="@+id/m21" android:layout_height="55dp" android:hint="A32" android:textColor="@color/text_primary" android:backgroundTint="@color/text_secondary" android:inputType="numberSigned|numberDecimal" android:gravity="center" android:layout_margin="4dp"/>
+                <EditText android:id="@+id/m22" android:layout_height="55dp" android:hint="A33" android:textColor="@color/text_primary" android:backgroundTint="@color/text_secondary" android:inputType="numberSigned|numberDecimal" android:gravity="center" android:layout_margin="4dp"/>
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginBottom="24dp">
+            <Button android:id="@+id/btnDet" android:layout_width="0dp" android:layout_height="60dp" android:layout_weight="1" android:text="DET" android:textColor="@color/text_primary" android:backgroundTint="@color/btn_operator" android:layout_marginEnd="4dp" />
+            <Button android:id="@+id/btnTranspose" android:layout_width="0dp" android:layout_height="60dp" android:layout_weight="1" android:text="TRANS" android:textColor="@color/text_primary" android:backgroundTint="@color/btn_scientific" android:layout_marginEnd="4dp" android:textAllCaps="false"/>
+            <Button android:id="@+id/btnInverse" android:layout_width="0dp" android:layout_height="60dp" android:layout_weight="1" android:text="INV" android:textColor="@color/text_primary" android:backgroundTint="@color/btn_scientific" android:textAllCaps="false"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Output Terminal"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvMatrixResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/display_bg"
+            android:padding="20dp"
+            android:text="Results will print here..."
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:fontFamily="monospace"/>
+    </LinearLayout>
+</ScrollView>

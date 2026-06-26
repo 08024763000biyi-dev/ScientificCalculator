@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descriptive Statistics"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter numbers separated by commas"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+            android:id="@+id/etStatsInput"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/display_bg"
+            android:hint="e.g. 5, 10, 15, 20, 25"
+            android:textColorHint="@color/text_secondary"
+            android:textColor="@color/text_primary"
+            android:padding="16dp"
+            android:inputType="text"
+            android:textSize="18sp"
+            android:layout_marginBottom="24dp"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:alignmentMode="alignBounds"
+            android:columnOrderPreserved="false"
+            android:layout_marginBottom="24dp">
+
+            <Button android:id="@+id/btnMean" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:text="MEAN" android:textColor="@color/text_primary" android:backgroundTint="@color/btn_operator" android:layout_margin="4dp"/>
+            <Button android:id="@+id/btnMedian" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:text="MEDIAN" android:textColor="@color/text_primary" android:backgroundTint="@color/btn_scientific" android:layout_margin="4dp"/>
+            <Button android:id="@+id/btnVariance" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:text="VARIANCE" android:textColor="@color/text_primary" android:backgroundTint="@color/btn_scientific" android:layout_margin="4dp"/>
+            <Button android:id="@+id/btnSD" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:text="STD DEV" android:textColor="@color/text_primary" android:backgroundTint="@color/btn_scientific" android:layout_margin="4dp"/>
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Analysis Output"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvStatsResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/display_bg"
+            android:padding="20dp"
+            android:text="Metrics summary will display here..."
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:fontFamily="monospace"/>
+    </LinearLayout>
+</ScrollView>
